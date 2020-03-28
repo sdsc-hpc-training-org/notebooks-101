@@ -9,7 +9,7 @@ Ever wondered what the difference between http and https was? The short answer i
 Ensure that you are ssh'd into comet and you have some jupyter notebooks in you user directory that you want to execute.
 
 ## Step 1: clone this repository
-You should clone this repository into your home directory. It doesn't really matter though, so just make sure its somewhere you can find it.
+You should clone the reverse proxy repository into your home directory. It doesn't really matter though, so just make sure its somewhere you can find it.
 Run the command `git clone https://github.com/sdsc-hpc-training-org/reverse-proxy.git`
 
 ## Step 2: change into the repository directory
@@ -17,3 +17,9 @@ Run the command `cd reverse-proxy/rpsvr_v0`
 
 ## Step 3: start the jupyter notebook server
 Run the command `./start_notebook <DIR>` where DIR is the top level directory you want to start the server in.
+
+## Step 4: paste the link in your browser
+The program will give you an https link. Copy and paste this into your browser.
+
+## Step 5: begin using your secure jupyter notebook
+Interact with your notebook as you normally would! Note that the default method only allows you to run your notebook for a 30 minute allotment so if you think you'll need longer than that, at the moment you'll have to update the starter code.
