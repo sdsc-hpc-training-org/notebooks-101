@@ -16,10 +16,14 @@ Run the command `git clone https://github.com/sdsc-hpc-training-org/reverse-prox
 Run the command `cd reverse-proxy/rpsvr_v0`
 
 ## Step 3: start the jupyter notebook server
-Run the command `./start_notebook <DIR>` where DIR is the top level directory you want to start the server in.
+Run the command `./start_notebook -d <DIR> -A <ALLOTMENT> [TIME]` where DIR is the top level directory you want to start the noebook server in, ALLOTMENT is the account you're billing to, and TIME is the amount of time you want to run the notebook for.
+
+Default DIR is ~, or your home directory.
+Default ALLOTMENT is your default allotment.
+Default TIME is 30 minutes.
 
 ## Step 4: paste the link in your browser
 The program will give you an https link. Copy and paste this into your browser.
 
 ## Step 5: begin using your secure jupyter notebook
-Interact with your notebook as you normally would! Note that the default method only allows you to run your notebook for a 30 minute allotment so if you think you'll need longer than that, at the moment you'll have to update the starter code.
+Interact with your notebook as you desired.
