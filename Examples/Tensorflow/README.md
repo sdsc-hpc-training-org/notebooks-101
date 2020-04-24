@@ -3,8 +3,7 @@ Tensorflow is a common library for training, inferencing, and messing around wit
 
 ## Step 1: ensure you are logged into comet
 
-## Step 2: install anaconda on your login node
-Run the following command to install conda on your login node: `wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh`
+
 
 
 ## Step : clone this repository
