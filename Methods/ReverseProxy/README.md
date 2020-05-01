@@ -18,7 +18,7 @@ Run the command `cd reverse-proxy/rpsvr_v0`
 ## Step 3: start the jupyter notebook server
 Run the command `./start_notebook -d <DIR> -A <ALLOTMENT> [TIME]` where DIR is the top level directory you want to start the noebook server in, ALLOTMENT is the account you're billing to, and TIME is the amount of time you want to run the notebook for.
 
-Default DIR is ~, or your home directory.
+Default DIR is ~, or your home directory /home/<username>.
 Default ALLOTMENT is your default allotment.
 Default TIME is 30 minutes.
 

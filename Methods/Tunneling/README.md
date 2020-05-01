@@ -29,3 +29,6 @@ Unless there are many other users on your node trying to start jupyter notebooks
 ## Visit the port in your local browser
 In any browser, type in 127.0.0.1:8888 and you should get your notebook. You'll have to input the jupyter token available in your terminal.
 If for some reason that address doesn't work, check the output of the terminal. You could try using the address localhost:8888 or 0.0.0.0:8888. 
+
+
+The reason tunneling is generally not the preffered method is because it is unnecessarily complicated and to reduce that complexity would take about the same amount of work as Reverse proxy. For example, you can't know the port the jupyter notebook is going end up open on until you start it on the node, and you need to tunnel through that port... which is why we need two terminals in this example.
