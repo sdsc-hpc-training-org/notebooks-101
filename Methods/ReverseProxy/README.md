@@ -16,14 +16,11 @@ Run the command `git clone https://github.com/sdsc-hpc-training-org/reverse-prox
 Run the command `cd reverse-proxy/rpsvr_v0`
 
 ## Step 3: start the jupyter notebook server
-Run the command `./start_notebook -d <DIR> -A <ALLOTMENT> [TIME]` where DIR is the top level directory you want to start the noebook server in, ALLOTMENT is the account you're billing to, and TIME is the amount of time you want to run the notebook for.
-
-Default DIR is ~, or your home directory /home/<username>.
-Default ALLOTMENT is your default allotment.
-Default TIME is 30 minutes.
+Run one of the example commands from `https://github.com/sdsc-hpc-training-org/reverse-proxy`. 
+At first, don't edit any of the scripts. The scripts are designed so that most new users won't need to edit them.
 
 ## Step 4: paste the link in your browser
 The program will give you an https link. Copy and paste this into your browser.
 
 ## Step 5: begin using your secure jupyter notebook
-Interact with your notebook as you desired.
+Interact with your notebook as you desired. The unfortunate thing about jupyter notebooks is if you forgot to install a particular package before starting the notebook, you will have to use compute time to do this. However, you don't have to wait for your time to be over; you can install packages on the login node while your notebook and still use them in your notebook.

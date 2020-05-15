@@ -13,3 +13,6 @@ If you want to learn and/or become more familiar with the command line, I would 
 Its called the missing semester and has a lot of important topics related to bash.
 
 Once you get a handle on that, you're ready to start a jupyter notebook. Check out one of the methods in this repo. The preferred method is ReverseProxy, since it is more secure.
+
+
+Also, each of these methods assumes you already have conda installed. So check out the "Conda Install" folder in this repo if you haven't already.
