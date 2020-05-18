@@ -13,8 +13,6 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
-sys.path.append('Methods')
-sys.path.append('Conda Install')
 
 # -- Project information -----------------------------------------------------
 
@@ -38,7 +36,7 @@ extensions = [
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-source_suffix = ['.rst', '.md']
+#source_suffix = ['.rst', '.md']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

@@ -1,5 +1,5 @@
 # AccessNode
-## Author: James McDougall
+Author: James McDougall
 
 ## How to access a node directly from the browser
 
