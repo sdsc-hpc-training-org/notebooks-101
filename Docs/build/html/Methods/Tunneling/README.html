@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Running a jupyter notebook on comet using ssh tunneling &#8212; Notebooks 101 1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="running-a-jupyter-notebook-on-comet-using-ssh-tunneling">
+<h1>Running a jupyter notebook on comet using ssh tunneling<a class="headerlink" href="#running-a-jupyter-notebook-on-comet-using-ssh-tunneling" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="open-two-terminals-on-your-computer">
+<h2>Open two terminals on your computer<a class="headerlink" href="#open-two-terminals-on-your-computer" title="Permalink to this headline">¶</a></h2>
+<p>The reason why you need two will become apparent soon</p>
+</div>
+<div class="section" id="ssh-into-comet-from-your-local-computer">
+<h2>SSH into comet from your local computer<a class="headerlink" href="#ssh-into-comet-from-your-local-computer" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">user&#64;comet.sdsc.edu</span></code>
+This is just a regular login</p>
+</div>
+<div class="section" id="claim-a-node">
+<h2>Claim a node<a class="headerlink" href="#claim-a-node" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">srun</span> <span class="pre">--partition=debug</span> <span class="pre">--pty</span> <span class="pre">--nodes=1</span> <span class="pre">--ntasks-per-node=24</span> <span class="pre">-t</span> <span class="pre">00:30:00</span> <span class="pre">--wait=0</span> <span class="pre">--export=ALL</span> <span class="pre">/bin/bash</span></code>
+<a class="reference external" href="https://www.sdsc.edu/support/user_guides/comet.html">source</a>
+Feel free to mess around with the parameters, but remember that in the debug partition you can only claim a node for up to 30 minutes.</p>
+</div>
+<div class="section" id="tunnel-into-the-login-node">
+<h2>Tunnel into the login node<a class="headerlink" href="#tunnel-into-the-login-node" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">8888:127.0.0.1:8888</span> <span class="pre">user&#64;comet.sdsc.edu</span></code>
+This establishes a tunnel between port 8888 on your computer and the Comet login node. So our picture looks a little bit like this:[image]</p>
+</div>
+<div class="section" id="start-a-jupyter-notebook-server-on-the-compute-node">
+<h2>Start a jupyter notebook server on the compute node.<a class="headerlink" href="#start-a-jupyter-notebook-server-on-the-compute-node" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">notebook</span> <span class="pre">--no-browser</span></code>
+The no browser option is required, otherwise the program may think you want a text representation of your outputs in the terminal, which trust me - you don’t want.</p>
+</div>
+<div class="section" id="tunnel-into-the-compute-node-which-you-claimed-earlier">
+<h2>Tunnel into the compute node which you claimed earlier<a class="headerlink" href="#tunnel-into-the-compute-node-which-you-claimed-earlier" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-L</span> <span class="pre">8888:127.0.0.1:&lt;jupyter</span> <span class="pre">port&gt;</span> <span class="pre">comet-node</span></code>
+You should be able to find the comet node name by looking in your other terminal. Here’s an example: [image]</p>
+<p>Unless there are many other users on your node trying to start jupyter notebooks, the jupyter port will almost always be 8888. If it not, however, you can see this in the terminal where you started your jupyter notebook. Here’s an example: [image]</p>
+</div>
+<div class="section" id="visit-the-port-in-your-local-browser">
+<h2>Visit the port in your local browser<a class="headerlink" href="#visit-the-port-in-your-local-browser" title="Permalink to this headline">¶</a></h2>
+<p>In any browser, type in 127.0.0.1:8888 and you should get your notebook. You’ll have to input the jupyter token available in your terminal.
+If for some reason that address doesn’t work, check the output of the terminal. You could try using the address localhost:8888 or 0.0.0.0:8888.</p>
+<p>The reason tunneling is generally not the preffered method is because it is unnecessarily complicated and to reduce that complexity would take about the same amount of work as Reverse proxy. For example, you can’t know the port the jupyter notebook is going end up open on until you start it on the node, and you need to tunnel through that port… which is why we need two terminals in this example.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Notebooks 101</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, James McDougall.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/Methods/Tunneling/README.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

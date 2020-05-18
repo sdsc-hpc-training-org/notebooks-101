@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Reverse Proxy &#8212; Notebooks 101 1.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="reverse-proxy">
+<h1>Reverse Proxy<a class="headerlink" href="#reverse-proxy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="author-james-mcdougall">
+<h2>Author: James McDougall<a class="headerlink" href="#author-james-mcdougall" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="how-to-access-a-notebook-securely-through-your-browser">
+<h2>How to access a notebook securely through your browser.<a class="headerlink" href="#how-to-access-a-notebook-securely-through-your-browser" title="Permalink to this headline">¶</a></h2>
+<p>Ever wondered what the difference between http and https was? The short answer is that https is more secure. In general, if you don’t want others to be able to see what you’re doing, use https. Using the method described here, the connection between your laptop and the a separate “Reverse Proxy Server” will be encrypted. When you separately start a notebook on a comet node using the methods below, the output of your code will be redirected through the Proxy server instead of going directly to your laptop. This provides an extra layer of security that you should become accustomed to using.</p>
+</div>
+<div class="section" id="step-0-prerequesites">
+<h2>Step 0: prerequesites<a class="headerlink" href="#step-0-prerequesites" title="Permalink to this headline">¶</a></h2>
+<p>Ensure that you are ssh’d into comet and you have some jupyter notebooks in you user directory that you want to execute.</p>
+</div>
+<div class="section" id="step-1-clone-this-repository">
+<h2>Step 1: clone this repository<a class="headerlink" href="#step-1-clone-this-repository" title="Permalink to this headline">¶</a></h2>
+<p>You should clone the reverse proxy repository into your home directory. It doesn’t really matter though, so just make sure its somewhere you can find it.
+Run the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/sdsc-hpc-training-org/reverse-proxy.git</span></code></p>
+</div>
+<div class="section" id="step-2-change-into-the-repository-directory">
+<h2>Step 2: change into the repository directory<a class="headerlink" href="#step-2-change-into-the-repository-directory" title="Permalink to this headline">¶</a></h2>
+<p>Run the command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">reverse-proxy/rpsvr_v0</span></code></p>
+</div>
+<div class="section" id="step-3-start-the-jupyter-notebook-server">
+<h2>Step 3: start the jupyter notebook server<a class="headerlink" href="#step-3-start-the-jupyter-notebook-server" title="Permalink to this headline">¶</a></h2>
+<p>Run one of the example commands from <code class="docutils literal notranslate"><span class="pre">https://github.com/sdsc-hpc-training-org/reverse-proxy</span></code>.
+At first, don’t edit any of the scripts. The scripts are designed so that most new users won’t need to edit them.</p>
+</div>
+<div class="section" id="step-4-paste-the-link-in-your-browser">
+<h2>Step 4: paste the link in your browser<a class="headerlink" href="#step-4-paste-the-link-in-your-browser" title="Permalink to this headline">¶</a></h2>
+<p>The program will give you an https link. Copy and paste this into your browser.</p>
+</div>
+<div class="section" id="step-5-begin-using-your-secure-jupyter-notebook">
+<h2>Step 5: begin using your secure jupyter notebook<a class="headerlink" href="#step-5-begin-using-your-secure-jupyter-notebook" title="Permalink to this headline">¶</a></h2>
+<p>Interact with your notebook as you desired. The unfortunate thing about jupyter notebooks is if you forgot to install a particular package before starting the notebook, you will have to use compute time to do this. However, you don’t have to wait for your time to be over; you can install packages on the login node while your notebook and still use them in your notebook.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../../index.html">Notebooks 101</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, James McDougall.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.0.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/Methods/ReverseProxy/README.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
