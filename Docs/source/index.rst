@@ -13,11 +13,3 @@ Welcome to Notebooks 101's documentation!
    methods/accessNode.md
    methods/tunneling.md
    methods/reverseProxy.md
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
