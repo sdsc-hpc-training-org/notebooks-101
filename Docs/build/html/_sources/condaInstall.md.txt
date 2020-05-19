@@ -1,4 +1,6 @@
 # Install Anaconda
+Author: James McDougall
+
 This is a common package manager used for data science, so it will be used for the examples and tutorials here. You should install Anaconda before working on any actual code.
 
 ## Download the installer on your login node

@@ -9,10 +9,10 @@ Welcome to Notebooks 101's documentation!
 .. toctree::
    :maxdepth: 2
 
+   condaInstall.md
    methods/accessNode.md
    methods/tunneling.md
    methods/reverseProxy.md
-
 
 
 Indices and tables
