@@ -3,12 +3,30 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Notebooks 101's documentation!
-=========================================
+==========================
+Running Notebooks on Comet
+==========================
+
+###################################################################################
+This site is used and maintened by the SDSC High Performance Training Organization.
+###################################################################################
+
+****************************************************
+Check out the SDSC `website <https://www.sdsc.edu>`_
+****************************************************
+
+*******************************************************************************
+Check out the training organization's `website <http://hpc-training.sdsc.edu>`_
+*******************************************************************************
+
+*****************************************************************************
+Check out one of the authors' `github <https://github.com/JamesMcDougallJr>`_
+*****************************************************************************
 
 .. toctree::
    :maxdepth: 2
-
+    
+   examples.md
    condaInstall.md
    methods/accessNode.md
    methods/tunneling.md

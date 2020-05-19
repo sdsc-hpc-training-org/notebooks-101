@@ -13,12 +13,13 @@
 import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
+sys.path.append('methods')
 
 # -- Project information -----------------------------------------------------
 
-project = 'Notebooks 101'
+project = 'Comet Notebooks 101'
 copyright = '2020, James McDougall'
-author = 'James McDougall'
+author = 'James McDougall, Mary Thomas'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
@@ -29,9 +30,7 @@ master_doc = 'index'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-    'recommonmark'
-]
+extensions = ['recommonmark']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

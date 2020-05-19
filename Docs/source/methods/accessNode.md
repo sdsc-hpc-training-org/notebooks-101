@@ -5,7 +5,21 @@ Author: James McDougall
 
 You can access a jupyter notebook directly from your browser after starting it on a comet node. This method is insecure, and will result in a notebook served over http, which is not something you want to be using on a regular basis.
 
-## Copy the example batch script in this folder.
+## Copy the batch script example
+`#!/usr/bin/env bash
+
+#SBATCH --job-name=tensorflow-compute
+#SBATCH --partition=compute
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=24
+#SBATCH --output=tensorflow-compute.o%j.%N
+
+module purge
+module list
+printenv
+time -p singularity exec /share/apps/compute/singularity/images/tensorflow/tensorflow-cpu.simg jupyter lab --no-browser --ip="$(hostname)"`
+
 This example uses the tensorflow singularity container available on comet. You can use any container you want. If you check out `/share/apps/computer/singularity` you can find many useful containers. The key part of this example is how the jupyter lab is started at the end - `jupyter lab --no-browser --ip "${hostname}"`.
 
 ## Submit this script to the queue
