@@ -1,5 +1,5 @@
 # Install Anaconda
-Author: James McDougall
+Author: James McDougall, Mary Thomas
 
 
 
