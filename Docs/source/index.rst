@@ -28,7 +28,6 @@ Check out one of the authors' `github <https://github.com/JamesMcDougallJr>`_
     
    examples.md
    condaInstall.md
-   methods/reverseProxy.md
    methods/accessNode.md
    methods/tunneling.md
-   
+   methods/reverseProxy.md
