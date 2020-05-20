@@ -1,9 +1,11 @@
-# AccessNode
-Author: James McDougall
+# Access Compute Node
+Author: James McDougall, Mary Thomas
 
 ## How to access a node directly from the browser
 
 You can access a jupyter notebook directly from your browser after starting it on a comet node. This method is insecure, and will result in a notebook served over http, which is not something you want to be using on a regular basis.
+
+First, log onto comet using SSH tunneling method.
 
 ## Copy the batch script example
 
