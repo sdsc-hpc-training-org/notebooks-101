@@ -17,7 +17,7 @@ Run the bash install script: `bash Anaconda3-2018.12-Linux-x86_64.sh`
 
 Conda should now be installed.
 
-## Use conda to create a virtual environment:
+## Conda Virtual Environment:
 $ conda create --name example_env    # choose whatever name you want
 
 ### To see which virtual environments you’ve created:
