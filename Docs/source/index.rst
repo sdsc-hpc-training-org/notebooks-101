@@ -8,7 +8,7 @@ Running Notebooks on Comet
 ==========================
 
 ############################################################################
-This site is maintained by the `SDSC High Performance Computing Training Group. <http://hpc-training.sdsc.edu>
+This site is maintained by the SDSC High Performance Computing Training Group. <http://hpc-training.sdsc.edu>
 ############################################################################
 
 SDSC Training events and material are designed to introduce new and current users to the high performance computing, data, and visualization resources available at SDSC and provide the programming skills necessary to use SDSC resources effectively and efficiently.
