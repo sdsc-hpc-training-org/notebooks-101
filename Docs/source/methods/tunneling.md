@@ -20,7 +20,7 @@ Feel free to mess around with the parameters, but remember that in the debug par
 In T1, `jupyter notebook --no-browser`. The no browser option is required, otherwise the program may think you want a text representation of your outputs in the terminal, which trust me - you don't want.  You can also specify a port number if you wish.
 
 ## Tunnel into the compute node 
-In T2, `ssh -L 8888:127.0.0.1:<jupyter port> user@comet-14-01.sdsc.edu`. Replace `comet-14-01` with the name of the compute node. You can view the compute node in T1 prompt. Replace the jupyter port with the port your jupyter notebook started on, which you can find in T1 after running the `jupyter notebook --no-browser` command. Almost always the jupyter port will be 8888 but don't worry if its different.
+In the second terminal, call it T2, `ssh -L 8888:127.0.0.1:<jupyter port> user@comet-14-01.sdsc.edu`. Replace `comet-14-01` with the name of the compute node. You can view the compute node in T1 prompt. Replace the jupyter port with the port your jupyter notebook started on, which you can find in T1 after running the `jupyter notebook --no-browser` command. Almost always the jupyter port will be 8888 but don't worry if its different.
 This establishes a tunnel between port 8888 on your computer and the jupyter port on the compute node
 
 ## Visit the port in your local browser
