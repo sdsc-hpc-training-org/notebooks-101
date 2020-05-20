@@ -8,7 +8,7 @@ Running Notebooks on Comet
 ==========================
 
 ###################################################################################
-This site is used and maintened by the SDSC High Performance Training Organization.
+This site is used and maintained by the SDSC High Performance Training Organization.
 ###################################################################################
 
 ****************************************************
@@ -25,10 +25,9 @@ Check out one of the authors' `github <https://github.com/JamesMcDougallJr>`_
 
 .. toctree::
    :maxdepth: 2
-    
+
    examples.md
    condaInstall.md
-   methods/reverseProxy.md
    methods/accessNode.md
    methods/tunneling.md
-   
+   methods/reverseProxy.md

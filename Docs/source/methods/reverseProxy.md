@@ -1,5 +1,7 @@
 # Reverse Proxy Service
 
+this is RPS documentation
+
 ## Prerequesites
 Ensure that you are ssh'd into comet and you have some jupyter notebooks in you user directory that you want to execute.
 
@@ -11,7 +13,7 @@ Run the command `git clone https://github.com/sdsc-hpc-training-org/reverse-prox
 Run the command `cd reverse-proxy/rpsvr_v0`
 
 ## Start the jupyter notebook server
-Run one of the example commands from `https://github.com/sdsc-hpc-training-org/reverse-proxy`. 
+Run one of the example commands from `https://github.com/sdsc-hpc-training-org/reverse-proxy`.
 At first, don't edit any of the scripts. The scripts are designed so that most new users won't need to edit them.
 
 ## Paste the link in your browser
