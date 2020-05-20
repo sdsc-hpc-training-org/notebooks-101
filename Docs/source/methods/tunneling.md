@@ -1,5 +1,5 @@
 # Tunneling
-Author: James McDougall
+Author: James McDougall, Mary Thomas
 
 ## Open two terminals on your computer
 The reason why you need two will become apparent soon
@@ -7,17 +7,22 @@ The reason why you need two will become apparent soon
 ## SSH into comet from your local computer
 `ssh user@comet.sdsc.edu`. This is just a regular login
 
-## Claim a node
-`srun --partition=debug --pty --nodes=1 --ntasks-per-node=24 -t 00:30:00 --wait=0 --export=ALL /bin/bash`
-[source](https://www.sdsc.edu/support/user_guides/comet.html)
+## Claim an interactive compute node
+```
+srun --partition=debug --pty --nodes=1 --ntasks-per-node=24 -t 00:30:00 --wait=0 --export=ALL /bin/bash
+```
+[Source: Comet User Guide](https://www.sdsc.edu/support/user_guides/comet.html)
+
 Feel free to mess around with the parameters, but remember that in the debug partition you can only claim a node for up to 30 minutes.
 
-## Tunnel into the login node
-`ssh -L 8888:127.0.0.1:8888 user@comet.sdsc.edu`
+## Tunnel into the login node (use the node name)
+`ssh -L 8888:127.0.0.1:8888 user@comet-14-01.sdsc.edu`
+
 This establishes a tunnel between port 8888 on your computer and the Comet login node. So our picture looks a little bit like this:[tbd]
 
 ## Start a jupyter notebook server on the compute node.
 `jupyter notebook --no-browser`
+
 The no browser option is required, otherwise the program may think you want a text representation of your outputs in the terminal, which trust me - you don't want.
 
 ## Tunnel into the compute node which you claimed earlier
