@@ -18,7 +18,7 @@ sys.path.append('methods')
 # -- Project information -----------------------------------------------------
 
 project = 'Comet Notebooks 101'
-copyright = '2020, James McDougall'
+copyright = '2020, SDSC HPC Training'
 author = 'James McDougall, Mary Thomas'
 
 # The full version, including alpha/beta/rc tags
