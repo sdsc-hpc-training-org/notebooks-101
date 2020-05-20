@@ -4,6 +4,9 @@
 
 #### 0) This repo
 Clone [this](https://github.com/sdsc-hpc-training-org/reverse-proxy) repository directly into your comet login node.  
+```
+git clone https://github.com/sdsc-hpc-training-org/reverse-proxy.git
+```
 
 #### 1) Anaconda
 The reverse proxy service relies on you handling your own python package installation. It was designed with Anaconda in mind. You can install Anaconda on your login node using wget: `wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh`. More info [here](https://stackoverflow.com/questions/38080407/how-can-i-install-the-latest-anaconda-with-wget#38080641).
