@@ -1,5 +1,7 @@
-# Tunneling
+# SSH Tunneling
 Author: James McDougall, Mary Thomas
+
+This tutorial shows you how to launch a Jupyter Notebook on a compute node, and to use ssh tunneling to securely connect to the notebook.
 
 ## Open two terminals on your computer
 The reason why you need two will become apparent soon
@@ -15,6 +17,8 @@ The reason why you need two will become apparent soon
 Feel free to mess around with the parameters, but remember that in the debug partition you can only claim a node for up to 30 minutes. You can use other queues, but you may have to wait longer.
 
 ## Tunnel into the login node (use the node name)
+NOTE: Are we tunneling from the login node, or from the local laptop?
+Not sure we need this step. Once we get the interactive node, we are alreay on the node and can launch the notebook. 
 `ssh -L 8888:127.0.0.1:8888 user@comet-14-01.sdsc.edu`
 
 This establishes a tunnel between port 8888 on your computer and the Comet login node. So our picture looks a little bit like this:[tbd]
@@ -22,7 +26,7 @@ This establishes a tunnel between port 8888 on your computer and the Comet login
 ## Start a jupyter notebook server on the compute node.
 `jupyter notebook --no-browser`
 
-The no browser option is required, otherwise the program may think you want a text representation of your outputs in the terminal, which trust me - you don't want.
+The no browser option is required, otherwise the program may think you want a text representation of your outputs in the terminal, which trust me - you don't want.  You can also specify a port number if you wish.
 
 ## Tunnel into the compute node which you claimed earlier
 `ssh -L 8888:127.0.0.1:<jupyter port> comet-node`
