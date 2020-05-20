@@ -19,10 +19,6 @@ Check out the SDSC `website <https://www.sdsc.edu>`_
 Check out the training organization's `website <http://hpc-training.sdsc.edu>`_
 *******************************************************************************
 
-*****************************************************************************
-Check out one of the authors' `github <https://github.com/JamesMcDougallJr>`_
-*****************************************************************************
-
 .. toctree::
    :maxdepth: 2
 
