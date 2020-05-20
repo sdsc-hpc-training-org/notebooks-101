@@ -27,7 +27,8 @@ Check out one of the authors' `github <https://github.com/JamesMcDougallJr>`_
    :maxdepth: 2
 
    condaInstall.md
-   methods/accessNode.md
+   methods/loginNode.md
+   methods/computeNode.md
    methods/tunneling.md
    methods/reverseProxy.md
    examples.md
