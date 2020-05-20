@@ -22,13 +22,8 @@ The no browser option is required, otherwise the program may think you want a te
 
 ## Tunnel into the compute node which you claimed earlier
 `ssh -L 8888:127.0.0.1:<jupyter port> comet-node`
-You should be able to find the comet node name by looking in your other terminal. Here's an example: [tbd]
-
-Unless there are many other users on your node trying to start jupyter notebooks, the jupyter port will almost always be 8888. If it not, however, you can see this in the terminal where you started your jupyter notebook. Here's an example: [tbd]
+You should be able to find the comet node name by looking in your other terminal. Unless there are many other users on your node trying to start jupyter notebooks, the jupyter port will almost always be 8888. If it not, however, you can see this in the terminal where you started your jupyter notebook. Here's an example: [tbd]
 
 ## Visit the port in your local browser
 In any browser, type in 127.0.0.1:8888 and you should get your notebook. You'll have to input the jupyter token available in your terminal.
-If for some reason that address doesn't work, check the output of the terminal. You could try using the address localhost:8888 or 0.0.0.0:8888. 
-
-
-The reason tunneling is generally not the preffered method is because it is unnecessarily complicated and to reduce that complexity would take about the same amount of work as Reverse proxy. For example, you can't know the port the jupyter notebook is going end up open on until you start it on the node, and you need to tunnel through that port... which is why we need two terminals in this example.
+If for some reason that address doesn't work, check the output of the terminal. You could try using the address localhost:8888 or 0.0.0.0:8888. The reason tunneling is generally not the preffered method is because it is unnecessarily complicated and to reduce that complexity would take about the same amount of work as Reverse proxy. For example, you can't know the port the jupyter notebook is going end up open on until you start it on the node, and you need to tunnel through that port... which is why we need two terminals in this example.
