@@ -26,8 +26,8 @@ Check out one of the authors' `github <https://github.com/JamesMcDougallJr>`_
 .. toctree::
    :maxdepth: 2
 
-   examples.md
    condaInstall.md
    methods/accessNode.md
    methods/tunneling.md
    methods/reverseProxy.md
+   examples.md
