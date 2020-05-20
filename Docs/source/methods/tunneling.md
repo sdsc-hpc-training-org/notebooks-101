@@ -4,16 +4,15 @@ Author: James McDougall, Mary Thomas
 ## Open two terminals on your computer
 The reason why you need two will become apparent soon
 
-## SSH into comet from your local computer
-`ssh user@comet.sdsc.edu`. This is just a regular login
+## SSH into comet from your local computer:
+`ssh user@comet.sdsc.edu`. This is just a regular SSH login.
 
 ## Claim an interactive compute node
-```
-srun --partition=debug --pty --nodes=1 --ntasks-per-node=24 -t 00:30:00 --wait=0 --export=ALL /bin/bash
-```
+`srun --partition=debug --pty --nodes=1 --ntasks-per-node=24 -t 00:30:00 --wait=0 --export=ALL /bin/bash`
+
 [Source: Comet User Guide](https://www.sdsc.edu/support/user_guides/comet.html)
 
-Feel free to mess around with the parameters, but remember that in the debug partition you can only claim a node for up to 30 minutes.
+Feel free to mess around with the parameters, but remember that in the debug partition you can only claim a node for up to 30 minutes. You can use other queues, but you may have to wait longer.
 
 ## Tunnel into the login node (use the node name)
 `ssh -L 8888:127.0.0.1:8888 user@comet-14-01.sdsc.edu`
