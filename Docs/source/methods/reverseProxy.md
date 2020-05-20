@@ -1,4 +1,4 @@
-# SDSC Reverse Proxy Service
+# Reverse Proxy
 
 ## Prerequesites:
 
