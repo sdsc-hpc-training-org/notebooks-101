@@ -7,7 +7,7 @@
 The SDSC Reverse Proxy Service is a prototype system that will allow users to launch standard Jupyter Services on on any Comet compute node using a reverse proxy server. The notebooks will be hosted on the internal cluster network as an HTTP service using standard jupyter commands. The service will then be made available to the user outside of the cluster firewall as an HTTPS connection between the external users web browser and the reverse proxy server. The goal is to minimize software changes for our users while improving the security of user notebooks running on our HPC systems. The RPS service is capable of running on any HPC system capable of supporting the RP server (needs Apache)
 
 
-## prerequisites:
+## Prerequisites:
 
 #### 0) Clone the RPS repository
 Clone [this](https://github.com/sdsc-hpc-training-org/reverse-proxy) repository directly into your comet login node.  
@@ -20,9 +20,9 @@ The reverse proxy service relies on you handling your own python package install
 
 If you're not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
 
-#### 2) Jupyter
+#### 2) JupyterNotebooks and JupyterLab
 You'll need to install jupyter using `conda install jupyter`. More info [here](https://anaconda.org/anaconda/jupyter).
-If you want to use jupyterlab, install that.
+If you want to use `Jupyterlab`, install that.
 
 #### 3) Other Python Packages
 Any other Python packages you need to run your notebook should be installed with Conda. You can install python packages in a conda environment while your notebook is running. This is useful if you forgot a package, you won't have to worry about cancelling and restarting your job before installing. However, it is recommended that you install all required packages beforehand to save yourself valuable compute time.
