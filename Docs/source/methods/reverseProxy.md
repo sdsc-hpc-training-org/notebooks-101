@@ -17,7 +17,7 @@ git clone https://github.com/sdsc-hpc-training-org/reverse-proxy.git
 
 ### Launching the Notebook
 
-The user can runs a notebook in one of two ways:
+The user can run a notebook in one of two ways:
 * Obtain an *interactive node* using the `srun` command, and running the `start_notebook.sh` script on the interactive node.
 * Building a batch script, submitting the job to the batch queue, and waiting for the batch job to start running, at which time the `start_notebook.sh` script will start running.
 
