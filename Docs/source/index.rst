@@ -13,8 +13,8 @@ Running Notebooks on Comet
 
    overview.md
    prerequisites.md
+   methods/runningNotebooks.md
    methods/sshConnect.md
-   methods/computeNode.md
    methods/tunneling.md
    methods/reverseProxy.md
    examples.md
