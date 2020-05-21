@@ -1,6 +1,6 @@
-## Connection over HTTP 
-* Connection to Notebook over HTTP (insecure)
+## Connection over HTTP
 
+This section described how to connection between the browser on your local host (laptop) to a Jupyter service running on Comet over HTTP and demonstrates why the connection is *not* secure.
 
 ![connection over HTTP](https://github.com/sdsc-hpc-training-org/notebooks-101/blob/master/Docs/images/jupyter-notebook-http.png?raw=true)
 
@@ -17,7 +17,27 @@ ssh -Y -l <username> comet.sdsc.edu
 git clone https://github.com/sdsc-hpc-training-org/notebook-examples.git
 ```
 
-It it against SDSC Comet policy to run applications on the login nodes, but you can run jobs on an interactive node or on a compute node using the batch queue (see the [Comet User Guide](https://comet.sdsc.edu)).
+
+### launch a notebook on the login node:
+Run the jupyter command:
+```
+(base) [mthomas@comet-ln2:~/reverse-proxy] jupyter notebook --no-browser
+[I 05:20:53.676 NotebookApp] JupyterLab extension loaded from /home/mthomas/miniconda3/lib/python3.7/site-packages/jupyterlab
+[I 05:20:53.676 NotebookApp] JupyterLab application directory is /home/mthomas/miniconda3/share/jupyter/lab
+[I 05:20:54.178 NotebookApp] Serving notebooks from local directory: /home/mthomas/reverse-proxy
+[I 05:20:54.178 NotebookApp] The Jupyter Notebook is running at:
+[I 05:20:54.178 NotebookApp] http://localhost:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
+[I 05:20:54.178 NotebookApp]  or http://127.0.0.1:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
+[I 05:20:54.178 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 05:20:54.187 NotebookApp]
+
+    To access the notebook, open this file in a browser:
+        file:///home/mthomas/.local/share/jupyter/runtime/nbserver-11084-open.html
+    Or copy and paste one of these URLs:
+        http://localhost:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
+     or http://127.0.0.1:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
+```
+Notice that the notebook URL is using HTTPS, and when you connect the browser on your local sysetm to this URL, the connection will _not_ be secure. Note: it is against SDSC Comet policy to run applications on the login nodes, and any applications being run will be killed by the system admins. A better way is to run the jobs on an interactive node or on a compute node using the batch queue (see the [Comet User Guide](https://comet.sdsc.edu)), or on a compute node, which is described in the next sections.
 
 ### Obtain an interactive node:
 Jobs can be run on the cluster in `batch mode` or in `interactive mode`. Batch jobs are performed remotely and without manual intervention. Interactive mode enable you to run/compile your program and environment setup on a compute node dedicated to you. To obtain an interactive node, type:
@@ -52,22 +72,22 @@ To see an example of remote visualization, run the  ```Matplotlib.ipynb```  note
 
 
 
-## Access the node in your browser
+#### Access the node in your browser
 Copy the the URL above into the browser running on your laptop.
 
-## Use your jupyterlab/jupyter notebook server!
+#### Use your jupyterlab/jupyter notebook server!
 Enjoy. Note that your notebook is unsecured.
 
 
-# Batch Script / Compute Node
+### Batch Script / Compute Node
 
-## How to access a node directly from the browser
+#### How to access a node directly from the browser
 
 You can access a jupyter notebook directly from your browser after starting it on a comet node. This method is insecure, and will result in a notebook served over http, which is not something you want to be using on a regular basis.
 
 First, log onto comet using SSH tunneling method.
 
-## Copy the batch script example
+#### Copy the batch script example
 
 ```
 #!/usr/bin/env bash
@@ -85,14 +105,15 @@ time -p singularity exec /share/apps/compute/singularity/images/tensorflow/tenso
 
 This example uses the tensorflow singularity container available on comet. You can use any container you want. If you check out `/share/apps/computer/singularity` you can find many useful containers. The key part of this example is how the jupyter lab is started at the end - `jupyter lab --no-browser --ip "${hostname}"`.
 
-## Submit this script to the queue
+#### Submit batch script to the queue
 Simply run `sbatch run-jupyter-tensorflow-compute.sh`
 One thing you may want to do is change the script to be `--partition=debug` if you want a shorter wait time.
 
-## Access the node in your browser
-First, wait for the job to be submitted to the queue. Then, look in the output file created by your batch job, which looks something like `tensorflow-compute.o%j.%N` if you used the example. Inside this file, you will see the output of the jupyterlab command. There, you should be able to see the port the jupyterlab server is running on, as well as the token you will need to login. My recommendation would be to just memorize the port number and copy the jupyter token. The port is almost always 8888 so it shouldn't be that hard to remember. You will also need to know the comet node you are logged in on. You can view this by typing this command: `squeue -u $USER`. Under the NODELIST section you can see the comet node.
+#### Access the Jupyter Service from your local browser
 
-Open up a new tab in your browser, and type in the following: `http://comet-xx-xx.sdsc.edu:PPPP` where `comet-xx-xx` is the comet node, `PPPP` is the port number (usually 8888). The jupyter notebook page should show up, and you can now paste in the token from the output file.
+Wait for the job to be submitted to the queue. Then, look in the output file created by the batch job, which looks something like `tensorflow-compute.o%j.%N` (for the example above). Inside this file, you will see the output of the `jupyter lab` command, which contains the `<port number>` that the jupyterlab server is running on, as well as the token you will need for authentication. You will also need to know the `<comet node name>` that you are logged onto. You can view this by typing this command: `squeue -u $USER`. Under the NODELIST section you can see the comet node name.
 
-## Use your jupyterlab/jupyter notebook server!
-Enjoy. Note that your notebook is unsecured.
+Open up a new tab in your browser, and type in the following: `http://<comet node name>.sdsc.edu:<port number>`. The jupyter notebook page should show up, and you can now paste in the token from the output file.
+
+#### Use your jupyterlab/jupyter notebook server!
+Enjoy. Note that your notebook is unsecured. You can make this connection secure by using `SSH Tunneling`, which is described in the next section.

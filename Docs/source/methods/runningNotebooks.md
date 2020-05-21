@@ -17,4 +17,4 @@ In addition, notebooks can be run on the following nodes:
 * Compute node
 * GPU node
 
-In the sections below, we'll describe how to connect and how to run the notebooks and the security impacts of these configurations.
+The choices and combinations used to run notebooks affect the security and efficiency of you application. In the next sections, we'll describe how to connect and how to run the notebooks and the security impacts of these configurations.

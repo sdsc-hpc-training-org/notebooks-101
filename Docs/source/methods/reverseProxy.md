@@ -9,13 +9,13 @@ The SDSC Reverse Proxy Service is a prototype system that will allow users to la
 
 Using the RPS is very simple and requires no tunneling and is secure (produces HTTPS URLs). To use RPS, SSH to connect to comet, and make sure that you have the software environment installed on the login node. Verify that you have installed the required software: `Anaconda`,  `conda`, `Jupyter` (notebooks, lab), and other Python packages needed for you application.
 
-## Clone the RPS repository
+### Clone the RPS repository
 Clone [this](https://github.com/sdsc-hpc-training-org/reverse-proxy) repository directly into your comet login node.  
 ```
 git clone https://github.com/sdsc-hpc-training-org/reverse-proxy.git
 ```
 
-## Launching the Notebook
+### Launching the Notebook
 
 The user can runs a notebook in one of two ways:
 * Obtain an *interactive node* using the `srun` command, and running the `start_notebook.sh` script on the interactive node.
@@ -27,7 +27,7 @@ The `start_notebook.sh` script performs the following tasks:
 * Prints the token to the terminal, so that the user can copy/paste the URL into a local browser:
 
 
-## Usage
+### Usage
 
 `./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [time]`
 
@@ -38,7 +38,7 @@ Default Time is 30 mins
 ```
 (If you don't know what $USER is, try this command: `echo $USER`. This is just your comet username)
 
-## Some common examples
+### Some common examples
 Start a notebook with all defaults
 `./start_notebook`
 
@@ -58,7 +58,7 @@ Start a notebook in the debug queue
 Start a notebook in the compute queue
 `./start_notebook -d ~ -A ddp363 -p compute 60`
 
-## Arguments
+### Arguments
 * [-b <string>] the batch script you want to submit with your notebook. Only those in the `batch` folder are supported.
 * [-p <string>] the partition to wait for. debug or compute
 * [-d <string>] the top-level directory of your jupyter notebook
