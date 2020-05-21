@@ -19,25 +19,29 @@ git clone https://github.com/sdsc-hpc-training-org/notebook-examples.git
 
 
 ### launch a notebook on the login node:
-Run the jupyter command:
+Run the jupyter command. Be sure to set the --ip to use the hostname, which will appear in your URL :
 ```
-(base) [mthomas@comet-ln2:~/reverse-proxy] jupyter notebook --no-browser
-[I 05:20:53.676 NotebookApp] JupyterLab extension loaded from /home/mthomas/miniconda3/lib/python3.7/site-packages/jupyterlab
-[I 05:20:53.676 NotebookApp] JupyterLab application directory is /home/mthomas/miniconda3/share/jupyter/lab
-[I 05:20:54.178 NotebookApp] Serving notebooks from local directory: /home/mthomas/reverse-proxy
-[I 05:20:54.178 NotebookApp] The Jupyter Notebook is running at:
-[I 05:20:54.178 NotebookApp] http://localhost:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
-[I 05:20:54.178 NotebookApp]  or http://127.0.0.1:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
-[I 05:20:54.178 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 05:20:54.187 NotebookApp]
+[mthomas@comet-14-01:~] jupyter notebook  --no-browser --ip=`/bin/hostname`
+[I 08:06:32.961 NotebookApp] JupyterLab extension loaded from /home/mthomas/miniconda3/lib/python3.7/site-packages/jupyterlab
+[I 08:06:32.961 NotebookApp] JupyterLab application directory is /home/mthomas/miniconda3/share/jupyter/lab
+[I 08:06:33.486 NotebookApp] Serving notebooks from local directory: /home/mthomas
+[I 08:06:33.487 NotebookApp] The Jupyter Notebook is running at:
+[I 08:06:33.487 NotebookApp] http://comet-14-01.sdsc.edu:8888/?token=6d7a48dda7cc1635d6d08f63aa1a696008fa89d8aa84ad2b
+[I 08:06:33.487 NotebookApp]  or http://127.0.0.1:8888/?token=6d7a48dda7cc1635d6d08f63aa1a696008fa89d8aa84ad2b
+[I 08:06:33.487 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:06:33.494 NotebookApp]
 
     To access the notebook, open this file in a browser:
-        file:///home/mthomas/.local/share/jupyter/runtime/nbserver-11084-open.html
+        file:///home/mthomas/.local/share/jupyter/runtime/nbserver-6614-open.html
     Or copy and paste one of these URLs:
-        http://localhost:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
-     or http://127.0.0.1:8888/?token=d76d0b7186848756e165dc6b9b5adb7029a15790fcffe3d3
+        http://comet-14-01.sdsc.edu:8888/?token=6d7a48dda7cc1635d6d08f63aa1a696008fa89d8aa84ad2b
+     or http://127.0.0.1:8888/?token=6d7a48dda7cc1635d6d08f63aa1a696008fa89d8aa84ad2b
+[I 08:06:45.773 NotebookApp] 302 GET /?token=6d7a48dda7cc1635d6d08f63aa1a696008fa89d8aa84ad2b (76.176.117.51) 0.74ms
+[E 08:06:45.925 NotebookApp] Could not open static file ''
+[W 08:06:46.033 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (76.176.117.51) 7.39ms referer=http://comet-14-01.sdsc.edu:8888/tree?token=6d7a48dda7cc1635d6d08f63aa1a696008fa89d8aa84ad2b
+[W 08:06:46.131 NotebookApp] 404 GET /static/components/react/react-dom.production.min.js (76.176.117.51) 1.02ms referer=http://comet-14-01.sdsc.edu:8888/tree?token=6d7a48dda7cc1635d6d08f63aa1a696008fa89d8aa84ad2b
 ```
-Notice that the notebook URL is using HTTPS, and when you connect the browser on your local sysetm to this URL, the connection will _not_ be secure. Note: it is against SDSC Comet policy to run applications on the login nodes, and any applications being run will be killed by the system admins. A better way is to run the jobs on an interactive node or on a compute node using the batch queue (see the [Comet User Guide](https://comet.sdsc.edu)), or on a compute node, which is described in the next sections.
+Notice that the notebook URL is using HTTP, and when you connect the browser on your local sysetm to this URL, the connection will _not_ be secure. Note: it is against SDSC Comet policy to run applications on the login nodes, and any applications being run will be killed by the system admins. A better way is to run the jobs on an interactive node or on a compute node using the batch queue (see the [Comet User Guide](https://comet.sdsc.edu)), or on a compute node, which is described in the next sections.
 
 ### Obtain an interactive node:
 Jobs can be run on the cluster in `batch mode` or in `interactive mode`. Batch jobs are performed remotely and without manual intervention. Interactive mode enable you to run/compile your program and environment setup on a compute node dedicated to you. To obtain an interactive node, type:
@@ -68,8 +72,6 @@ Note: This token is your auth so don't email/send it around. It will go away whe
 
 To learn about Python, run the ```Python basics.ipynb```   notebook.
 To see an example of remote visualization, run the  ```Matplotlib.ipynb```  notebook!
-
-
 
 
 #### Access the node in your browser
