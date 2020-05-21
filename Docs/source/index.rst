@@ -12,11 +12,11 @@ Running Notebooks on Comet
    :maxdepth: 2
 
    overview.md
-   prerequisites.md
    methods/runningNotebooks.md
    methods/sshConnect.md
    methods/tunneling.md
    methods/reverseProxy.md
    examples.md
+   prerequisites.md
    aboutus.md
    contactus.md
