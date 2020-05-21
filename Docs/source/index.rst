@@ -23,3 +23,4 @@ SDSC `Training events and material <https://www.sdsc.edu/education_and_training/
    methods/reverseProxy.md
    examples.md
    aboutus.md
+   contactus.md
