@@ -1,10 +1,13 @@
+# Running Jupyter Notebooks
+
 ## SSH Connection
+
+![ssh tunnel](../images/ssh-tunnel-local-remote.png)
 
 ### This tutorial shows you how to run Jupyter Lab or Notebooks using SSH connection to Comet.
 
 You can access a jupyter notebook directly from your browser after starting it on the login node. Note: This method is insecure, and will result in a notebook served over http, which is not something you want to be using on a regular basis. In addition, it is against SDSC policy to run notebooks on the login node. It is presented here for instructional purposes only.
-# Using Jupyter Notebooks on the SDSC Comet Cluster
-**By** [Mary Thomas, SDSC](https://hpc-students.sdsc.edu/instr_bios/mary_thomas.html)
+
 
 ### Log onto comet.sdsc.edu  
 ```

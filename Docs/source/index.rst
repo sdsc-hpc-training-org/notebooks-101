@@ -11,13 +11,13 @@ Running Notebooks on Comet
 This site is maintained by the `SDSC <https://www.sdsc.edu>`_ HPC Training Group.
 ############################################################################
 
- 
+
 .. toctree::
    :maxdepth: 2
 
+   overview.md
    prerequisites.md
    methods/sshConnect.md
-   methods/loginNode.md
    methods/computeNode.md
    methods/tunneling.md
    methods/reverseProxy.md
