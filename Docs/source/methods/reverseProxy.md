@@ -1,5 +1,11 @@
 # Reverse Proxy
 
+## overview
+
+![ssh tunnel](https://github.com/sdsc-hpc-training-org/notebooks-101/blob/master/Docs/images/Reverse-Proxy-Service-for-Secure-Jupyter-Notebooks-Arch.pdf?raw=true)
+
+
+
 ## Prerequesites:
 
 #### 0) This repo
@@ -24,7 +30,7 @@ Any other Python packages you need to run your notebook should be installed with
 Support for containers will be coming soon.
 
 ### Usage: ./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [time]
-  
+
 ```
 Default Dir: /home/$USER
 Default Allocation is your sbatch default allocation
