@@ -22,6 +22,9 @@ git clone https://github.com/sdsc-hpc-training-org/notebook-examples.git
 Run the jupyter command. Be sure to set the --ip to use the hostname, which will appear in your URL :
 ```
 [mthomas@comet-14-01:~] jupyter notebook  --no-browser --ip=`/bin/hostname`
+```
+You will see output similar to that shown below:
+```
 [I 08:06:32.961 NotebookApp] JupyterLab extension loaded from /home/mthomas/miniconda3/lib/python3.7/site-packages/jupyterlab
 [I 08:06:32.961 NotebookApp] JupyterLab application directory is /home/mthomas/miniconda3/share/jupyter/lab
 [I 08:06:33.486 NotebookApp] Serving notebooks from local directory: /home/mthomas
