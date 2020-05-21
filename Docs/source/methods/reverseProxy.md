@@ -4,31 +4,31 @@
 
 ![arch](https://github.com/sdsc-hpc-training-org/notebooks-101/raw/master/Docs/images/Reverse-Proxy-Service-for-Secure-Jupyter-Notebooks-Arch.png?raw=true)
 
-The SDSC Reverse Proxy Service is a prototype system that will allow users to launch standard Jupyter Services on on any Comet compute node using a reverse proxy server. The notebooks will be hosted on the internal cluster network as an HTTP service using standard jupyter commands. The service will then be made available to the user outside of the cluster firewall as an HTTPS connection between the external users web browser and the reverse proxy server. The goal is to minimize software changes for our users while improving the security of user notebooks running on our HPC systems. The RPS service is capable of running on any HPC system capable of supporting the RP server (needs Apache)
+The SDSC Reverse Proxy Service is a prototype system that will allow users to launch standard Jupyter Services on on any Comet compute node using a reverse proxy server using a simple bash script called `start_notebook`. The notebooks will be hosted on the internal cluster network as an HTTP service using standard jupyter commands. The service will then be made available to the user outside of the cluster firewall as an HTTPS connection between the external users web browser and the reverse proxy server. The goal is to minimize software changes for our users while improving the security of user notebooks running on our HPC systems. The RPS service is capable of running on any HPC system capable of supporting the RP server (needs Apache).
 
+Using the RPS is very simple and requires no tunneling and is secure (produces HTTPS URLs). To use RPS, SSH to connect to comet, and make sure that you have the software environment installed on the login node. Verify that you have installed the required software: `Anaconda`,  `conda`, `Jupyter` (notebooks, lab), and other Python packages needed for you application.
 
-## Prerequisites:
-
-#### 0) Clone the RPS repository
+## Clone the RPS repository
 Clone [this](https://github.com/sdsc-hpc-training-org/reverse-proxy) repository directly into your comet login node.  
 ```
 git clone https://github.com/sdsc-hpc-training-org/reverse-proxy.git
 ```
 
-#### 1) Anaconda
-The reverse proxy service relies on you handling your own python package installation. It was designed with Anaconda in mind. You can install Anaconda on your login node using wget: `wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh`. More info [here](https://stackoverflow.com/questions/38080407/how-can-i-install-the-latest-anaconda-with-wget#38080641).
+## Launching the Notebook
 
-If you're not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
+The user can runs a notebook in one of two ways:
+* Obtain an *interactive node* using the `srun` command, and running the `start_notebook.sh` script on the interactive node.
+* Building a batch script, submitting the job to the batch queue, and waiting for the batch job to start running, at which time the `start_notebook.sh` script will start running.
 
-#### 2) JupyterNotebooks and JupyterLab
-You'll need to install jupyter using `conda install jupyter`. More info [here](https://anaconda.org/anaconda/jupyter).
-If you want to use `Jupyterlab`, install that.
-
-#### 3) Other Python Packages
-Any other Python packages you need to run your notebook should be installed with Conda. You can install python packages in a conda environment while your notebook is running. This is useful if you forgot a package, you won't have to worry about cancelling and restarting your job before installing. However, it is recommended that you install all required packages beforehand to save yourself valuable compute time.
+The `start_notebook.sh` script performs the following tasks:
+* Sends a request to the reverse proxy server (RPS) to get a one-time token and a port number
+* Launch the jupyter notebook command using the token and port number.
+* Prints the token to the terminal, so that the user can copy/paste the URL into a local browser:
 
 
-### Usage: ./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [time]
+## Usage
+
+`./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [time]`
 
 ```
 Default Dir: /home/$USER
