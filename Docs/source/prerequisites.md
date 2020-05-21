@@ -13,7 +13,12 @@ Run the following command to install conda on the Comet login node: `wget https:
 ### Run the installer
 Run the bash install script: `bash Anaconda3-2018.12-Linux-x86_64.sh`
 
-Conda should now be installed.
+`Conda` should now be installed.
+
+## Install Jupyter Notebook and Jupyter Lab
+You'll need to install jupyter using `conda install jupyter`. More info [here](https://anaconda.org/anaconda/jupyter).
+
+If you want to use jupyterlab, install that.
 
 ## Setup a Conda Virtual Environment:
 
