@@ -16,11 +16,6 @@ git clone https://github.com/sdsc-hpc-training-org/reverse-proxy.git
 ```
 
 ### Launching the Notebook
-
-The user can run a notebook in one of two ways:
-* Obtain an *interactive node* using the `srun` command, and running the `start_notebook.sh` script on the interactive node.
-* Building a batch script, submitting the job to the batch queue, and waiting for the batch job to start running, at which time the `start_notebook.sh` script will start running.
-
 The `start_notebook.sh` script performs the following tasks:
 * Sends a request to the reverse proxy server (RPS) to get a one-time token and a port number
 * Launches the jupyter notebook command using the token and port number.
@@ -29,11 +24,12 @@ The `start_notebook.sh` script performs the following tasks:
 
 ### Usage
 
-`./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [time]`
+`./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [-b <string>] [time]`
 
 ```
-Default Dir: /home/$USER
-Default Allocation is your sbatch default allocation
+-d: Default Dir is /home/$USER
+-A: Default Allocation is your sbatch default allocation
+-b: Default batch script is ./batch/batch_notebook.sh
 Default Time is 30 mins
 ```
 (If you don't know what $USER is, try this command: `echo $USER`. This is just your comet username)
@@ -43,14 +39,15 @@ Start a notebook with all defaults
 `./start_notebook`
 
 This is your waiting screen. This screen occurs before your batch job is submitted.
-![alt text](https://github.com/sdsc-hpc-training-org/reverse-proxy/blob/master/.examples_images/ex1.png?raw=true)
+![Waiting Screen](https://github.com/sdsc-hpc-training-org/reverse-proxy/blob/master/.examples_images/ex1.png?raw=true)
 
 Your notebook is ready to go!
-![alt text](https://github.com/sdsc-hpc-training-org/reverse-proxy/blob/master/.examples_images/ex2.png?raw=true)
+![Notebook Ready](https://github.com/sdsc-hpc-training-org/reverse-proxy/blob/master/.examples_images/ex2.png?raw=true)
 
 If you refresh too soon, you may see this page. This is expected and you'll just have to wait.
-![alt text](https://github.com/sdsc-hpc-training-org/reverse-proxy/blob/master/.examples_images/ex3.png?raw=true)
+![Token Mapping](https://github.com/sdsc-hpc-training-org/reverse-proxy/blob/master/.examples_images/ex3.png?raw=true)
 
+Note that the time positional argument must occur after all the flags. There will be an error if you put any flags after the positional argument.
 
 Start a notebook in the debug queue
 `./start_notebook -d ~ -p debug 30`
