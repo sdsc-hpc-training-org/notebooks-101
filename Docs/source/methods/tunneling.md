@@ -1,6 +1,8 @@
 ## Connection over SSH Tunneling
 Connection to Notebook over SSH tunneling (secure)
 
+![connection over HTTP](https://github.com/sdsc-hpc-training-org/notebooks-101/blob/master/Docs/images/jupyter-notebook-http-ssh-tunnel.png?raw=true)
+
 
 This section shows you how to launch a Jupyter Notebook using an interactive node or on a compute node, and to use ssh tunneling to securely connect to the notebook server.
 

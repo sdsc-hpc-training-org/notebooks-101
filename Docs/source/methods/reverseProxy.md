@@ -23,7 +23,7 @@ The user can runs a notebook in one of two ways:
 
 The `start_notebook.sh` script performs the following tasks:
 * Sends a request to the reverse proxy server (RPS) to get a one-time token and a port number
-* Launch the jupyter notebook command using the token and port number.
+* Launches the jupyter notebook command using the token and port number.
 * Prints the token to the terminal, so that the user can copy/paste the URL into a local browser:
 
 
