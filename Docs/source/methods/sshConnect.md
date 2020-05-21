@@ -2,7 +2,9 @@
 
 ## SSH Connection
 
-![ssh tunnel](../images/ssh-tunnel-local-remote.png)
+![ssh tunnel](https://github.com/sdsc-hpc-training-org/notebooks-101/blob/master/Docs/images/jupyter-notebook-http.png?raw=true)
+
+Note: google chrome has many local ports open in the range of 7713 - 7794. They are all connect to 80 or 443 on the other end.
 
 ### This tutorial shows you how to run Jupyter Lab or Notebooks using SSH connection to Comet.
 
