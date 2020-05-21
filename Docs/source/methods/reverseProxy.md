@@ -2,7 +2,7 @@
 
 ## overview
 
-![ssh tunnel](https://github.com/sdsc-hpc-training-org/notebooks-101/blob/master/Docs/images/Reverse-Proxy-Service-for-Secure-Jupyter-Notebooks-Arch.pdf?raw=true)
+![arch](https://github.com/sdsc-hpc-training-org/notebooks-101/raw/master/Docs/images/Reverse-Proxy-Service-for-Secure-Jupyter-Notebooks-Arch.pdf?raw=true)
 
 
 
