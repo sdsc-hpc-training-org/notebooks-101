@@ -19,18 +19,35 @@ git clone https://github.com/sdsc-hpc-training-org/reverse-proxy.git
 The `start_notebook.sh` script performs the following tasks:
 * Sends a request to the reverse proxy server (RPS) to get a one-time token and a port number
 * Launches the jupyter notebook command using the token and port number.
-* Prints the token to the terminal, so that the user can copy/paste the URL into a local browser:
-
-
-### Usage
-
-`./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [-b <string>] [-t time]`
+* Prints a secure URL containing the token to the terminal, so that the user can copy/paste the URL into a local browser:
+```
+Your notebook is here:
+https://aversion-runaround-spearman.comet-user-content.sdsc.edu?token=099aa825b1403d58889842ab2c758885
 
 ```
--d: Default Dir is /home/$USER
--A: Default Allocation is your sbatch default allocation
--b: Default batch script is ./batch/batch_notebook.sh
--t: Default time is 30 minutes
+
+### Usage
+`./start_notebook.sh [-p <string>] [-d <string>] [-A <string>] [-b <string>] [-t time] [-i]`
+
+```
+
+-p: the partition to wait for. debug or compute
+    Default Partition is "compute"
+    
+-d: the top-level directory of your jupyter notebook
+    Default Dir is /home/$USER
+
+-A: the project allocation to be used for this notebook
+    Default Allocation is your sbatch system default allocation (also called project or group)
+    
+-b: the batch script you want to submit with your notebook. Only those in the `batch` folder are supported.
+    Default batch script is ./batch/batch_notebook.sh
+    
+-t: the time to run the notebook. Your account will be charged for the time you put here so be careful.
+    Default time is 30 minutes
+    
+-i: Get extra information about the job you submitted using the script
+
 ```
 (If you don't know what $USER is, try this command: `echo $USER`. This is just your comet username)
 
@@ -54,10 +71,3 @@ Start a notebook in the debug queue
 
 Start a notebook in the compute queue
 `./start_notebook -d ~ -A ddp363 -p compute -t 60`
-
-### Arguments
-* [-b <string>] the batch script you want to submit with your notebook. Only those in the `batch` folder are supported.
-* [-p <string>] the partition to wait for. debug or compute
-* [-d <string>] the top-level directory of your jupyter notebook
-* [-A <string>] the project allocation to be used for this notebook
-* [-t <number>] the time to run the notebook. If you put in more than 30 minutes and also the debug queue, this will cause an error.
