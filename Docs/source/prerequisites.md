@@ -8,17 +8,17 @@ In general, Juypter technologies perform best when you manage your own python pa
 If you’re not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
 
 ### Install conda
-Download the installer on your login node
-Run the following command to install conda on the Comet login node: `wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh`
+Download the installer onto your login node by running the command: `wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh`
 
 ### Run the installer
-Run the bash install script: `bash Anaconda3-2018.12-Linux-x86_64.sh`
-
-`Conda` should now be installed.
+Change the permissions so you can exectue the script: `chmod +x Miniconda3-latest-Linux-x86_64.sh`
+Run the bash install script: `bash Miniconda3-latest-Linux-x86_64.sh` or `./Miniconda3-latest-Linux-x86_64.sh`
+You should answer yes to almost all of the questions. Make sure to type in the word "yes" for the license agreement.
+Also be sure to type in "yes" when the installer asks you if you want to run conda init.
+Miniconda should now be installed. If Miniconda still does not seem to be installed, try using the command `source ~/.bashrc`, which "restarts" conda.
 
 ## Install Jupyter Notebook and Jupyter Lab
 You'll need to install jupyter using `conda install jupyter`. More info [here](https://anaconda.org/anaconda/jupyter).
-
 If you want to use jupyterlab, install that.
 
 ## Other Python Packages:**
@@ -26,7 +26,6 @@ Any other Python packages you need to run your notebook should be installed with
 
 
 ## Setup a Conda Virtual Environment:
-
 Choose whatever name you want - it should reflect the application/project you are working on.
 `$ conda create --name example_env`    
 
