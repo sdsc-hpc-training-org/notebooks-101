@@ -1,13 +1,14 @@
 # Software Prerequisites
 
-Running Juypter notebooks relies on you handling your own python package installation. It was designed with Anaconda in mind. This is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using Miniconda.
+Running Juypter notebooks relies on you handling your own python package installation. It was designed with Anaconda in mind. This is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using Miniconda. 
+
+[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
 
 If you’re not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
 
 ### Install Miniconda
-[Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
-
-To install, follow the instructions [here](https://docs.conda.io/en/latest/miniconda.html). On the HPC system, use ```wget``` to download the install package.  
+To install Miniconda on Linux, you need to locate and download the installer package for your system. For linx, you will find a list of installers [here](https://docs.conda.io/en/latest/miniconda.html#linux-installers). On the HPC system, use ```wget. <link-to-installer-file>``` to download the install package. 
+Once you have downloaded the correct installer, follow the installation instructions [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
 ### Run the installer
 Change the permissions so you can exectue the script: `chmod +x Miniconda3-latest-Linux-x86_64.sh`
