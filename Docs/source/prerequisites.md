@@ -7,7 +7,7 @@ Running Juypter notebooks relies on you handling your own python package install
 If you’re not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
 
 ### Install Miniconda
-To install Miniconda on Linux, you need to locate and download the installer package for your system. For linx, you will find a list of installers [here](https://docs.conda.io/en/latest/miniconda.html#linux-installers). On the HPC system, use ```wget. <link-to-installer-file>``` to download the install package. 
+To install Miniconda on Linux, you need to locate and download the installer package for your system. For linx, you will find a list of installers [here](https://docs.conda.io/en/latest/miniconda.html#linux-installers). On the HPC system, use ```wget <link-to-installer-file>``` to download the install package. 
 Once you have downloaded the correct installer, follow the installation instructions [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
 ### Run the installer
