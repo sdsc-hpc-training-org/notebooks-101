@@ -1,6 +1,7 @@
 ## Reverse Proxy Service (HTTPS)
 * Connection to Notebook over HTTPS using the [Reverse Proxy Service](https://github.com/sdsc-hpc-training-org/reverse-proxy)  (very secure)
-[//]: # (notebooks 101 repo)
+[//]:  <> (notebooks 101 repo)
+<!-- comment2 -->
 
 ### Overview
 
