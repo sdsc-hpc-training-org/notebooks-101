@@ -4,7 +4,6 @@ Running Juypter notebooks relies on you handling your own python package install
 
 ## Install Anaconda
 In general, Juypter technologies perform best when you manage your own python package installation (you can controll the packages and can update as needed). You can install Anaconda on the Comet login node using wget: wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh. More info [here](https://stackoverflow.com/questions/38080407/how-can-i-install-the-latest-anaconda-with-wget#38080641).
-
 If you’re not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
 
 ### Install conda
