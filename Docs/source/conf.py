@@ -5,7 +5,7 @@ sys.path.append('methods')
 
 # -- Project information -----------------------------------------------------
 
-project = 'Comet Notebooks 101'
+project = 'Notebooks 101'
 copyright = '2020, SDSC HPC Training'
 author = 'James McDougall, Mary Thomas'
 
