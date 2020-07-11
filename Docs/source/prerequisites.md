@@ -21,31 +21,31 @@ Miniconda should now be installed. If Miniconda still does not seem to be instal
 You'll need to install jupyter using `conda install jupyter`. More info [here](https://anaconda.org/anaconda/jupyter).
 If you want to use jupyterlab, install that.
 
-## Other Python Packages:**
+## Other Python Packages**
 Any other Python packages you need to run your notebook should be installed with Conda. You can install python packages in a conda environment while your notebook is running. This is useful if you forgot a package, you won't have to worry about cancelling and restarting your job before installing. However, it is recommended that you install all required packages beforehand to save yourself valuable compute time.
 
 
-## Setup a Conda Virtual Environment:
+## Setup a Conda Virtual Environment
 Choose whatever name you want - it should reflect the application/project you are working on.
 `$ conda create --name example_env`    
 
-### To see which virtual environments you’ve created:
+### To see which virtual environments you’ve created
 $ conda env list
 
 To use a particular virtual environment (e.g., one named ‘example_env’):
 $ source activate example_env # Note: don’t use ‘conda activate’
 
-### To see which versions of a package are available:
+### To see which versions of a package are available
 (example_env) $ conda search package_name
 This searches for packages from the default “channel.”  Other channels might have newer versions available.  For instance, we’ve seen more recent versions of the ‘yt’ package in the channel named “conda-forge”.  To install from a different channel, use something like:
 (example_env) $ conda search -c conda-forge yt
 
-### To install packages in an active virtual environment:
+### To install packages in an active virtual environment
 (example_env) $ conda install package_name  # e.g, like ‘yt’
 As with the package search, you can install from a different channel using a ‘-c channel_name’ flag, e.g.:
 (example_env) $ conda install -c conda-forge yt
 
-### To update a package to a newer version:
+### To update a package to a newer version
 (example_env) $ conda update package_name
 Like install and search, this command can take a ‘-c channel-name’ flag if you want to update to newer versions than are in the default channel.
 
@@ -74,7 +74,7 @@ To clone the repo, log onto comet, cd into the directory where you want to work,
 git clone https://github.com/sdsc-hpc-training-org/notebook-examples.git
 ```
 
-## Basic HPC Skills:
+## Basic HPC Skills
 
 If you are a beginner, or need to brush up on some basic skills needed to run jobs on HPC systems, check out our repo:
 

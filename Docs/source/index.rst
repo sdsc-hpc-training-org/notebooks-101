@@ -7,16 +7,13 @@
 Running Notebooks on HPC Systems 
 ========================================
 
-
+*****************************************************************************
+This is the landing page for Jupyter Notebooks on SDSC HPC system information. Choose the correct version in the bottom right of the page for the system you are using.
+*****************************************************************************
 .. toctree::
    :maxdepth: 2
 
    overview.md
-   .. methods/runningNotebooks.md
-   methods/sshConnect.md
-   .. methods/tunneling.md
-   .. methods/reverseProxy.md
-   .. examples.md
    prerequisites.md
    aboutus.md
    contactus.md
