@@ -5,8 +5,15 @@
 
 # notebooks-101
 Everything you need to know about running Jupyter Notebooks on HPC Systems at SDSC.
-
 Read the tutorials here: https://comet-notebooks-101.readthedocs.io/en/latest/
+
+## Interactive Video Link:
+This material was presented as part of a webinar presented on xxxxx. The link to the presentation can be found here:
+https://education.sdsc.edu/training/interactive/202005_running_jupyter_notebooks_on_comet/index.php
+
+## GitHub Repo to training material:
+https://github.com/sdsc-hpc-training/basic_skills/tree/master/how_to_run_notebooks_on_comet
+
 
 ## License
 
