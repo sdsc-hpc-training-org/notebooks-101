@@ -10,6 +10,13 @@ Running Notebooks on HPC Systems
 *****************************************************************************
 This is the landing page for Jupyter Notebooks on SDSC HPC system information. Choose the correct version in the bottom right of the page for the system you are using.
 *****************************************************************************
+
+Comet: https://comet-notebooks-101.readthedocs.io/en/comet/
+************************************
+
+Stratus: https://comet-notebooks-101.readthedocs.io/en/tscc/ 
+************************************
+
 .. toctree::
    :maxdepth: 2
 
