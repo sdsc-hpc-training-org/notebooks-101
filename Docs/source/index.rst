@@ -31,7 +31,6 @@ The choices and combinations used to run notebooks affect the security and effic
 .. toctree::
    :maxdepth: 2
 
-   methods/sshConnect.md
    methods/tunneling.md
    methods/reverseProxy.md
    examples.md
