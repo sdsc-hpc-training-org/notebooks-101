@@ -30,7 +30,12 @@ or
 ```
 You should answer yes to almost all of the questions. Make sure to type in the word "yes" for the license agreement.
 Also be sure to type in "yes" when the installer asks you if you want to run conda init.
-Miniconda should now be installed. If Miniconda still does not seem to be installed, try using the command `source ~/.bashrc`, which "restarts" conda.
+Miniconda should now be installed. By default, Miniconda should be installed in your home directory:
+```
+Miniconda3 will now be installed into this location:
+/home/$USER/miniconda3
+```
+If Miniconda still does not seem to be installed, try using the command `source ~/.bashrc`, which "restarts" conda.
 
 To verify the installation, run the command:
 ```
