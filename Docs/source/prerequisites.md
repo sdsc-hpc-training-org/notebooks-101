@@ -1,25 +1,61 @@
 # Software Prerequisites
 
-Running Juypter notebooks relies on you handling your own python package installation. It was designed with Anaconda in mind. This is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using Miniconda. 
+Running Juypter notebooks relies on you handling your own python jupyter package installation. Typically, users install Anaconda on local systems. Anaconda is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using `Miniconda`. 
 
 [Miniconda](https://docs.conda.io/en/latest/miniconda.html) is a free minimal installer for conda. It is a small, bootstrap version of Anaconda that includes only conda, Python, the packages they depend on, and a small number of other useful packages.
 
 If you’re not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
 
 ## Install Miniconda
-To install Miniconda on Linux, you need to locate and download the installer package for your system. For linx, you will find a list of installers [here](https://docs.conda.io/en/latest/miniconda.html#linux-installers). On the HPC system, use ```wget <link-to-installer-file>``` to download the install package. 
+To install Miniconda on Linux, you need to locate and download the installer package for your system. For linx, you will find a list of installers [here](https://docs.conda.io/en/latest/miniconda.html#linux-installers). On the HPC system, use 
+```
+wget <link-to-installer-file>
+``` 
+to download the install package. 
 Once you have downloaded the correct installer, follow the installation instructions [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
 ### Run the installer
 Change the permissions so you can exectue the script: `chmod +x Miniconda3-latest-Linux-x86_64.sh`
-Run the bash install script: `bash Miniconda3-latest-Linux-x86_64.sh` or `./Miniconda3-latest-Linux-x86_64.sh`
+Run the bash install script: 
+```bash Miniconda3-latest-Linux-x86_64.sh
+``` 
+or `./Miniconda3-latest-Linux-x86_64.sh`
 You should answer yes to almost all of the questions. Make sure to type in the word "yes" for the license agreement.
 Also be sure to type in "yes" when the installer asks you if you want to run conda init.
 Miniconda should now be installed. If Miniconda still does not seem to be installed, try using the command `source ~/.bashrc`, which "restarts" conda.
 
-## Install Jupyter Notebook and Jupyter Lab
-You'll need to install jupyter using `conda install jupyter`. More info [here](https://anaconda.org/anaconda/jupyter).
-If you want to use jupyterlab, install that.
+To verify the installation, run the command:
+```
+(base) [mthomas@comet-ln2:~] which conda
+~/miniconda3/bin/conda
+```
+
+
+## Install Jupyter Notebook
+To run jupyter notebooks,  you need to install the `jupyter` package using the command 
+```
+conda install jupyter
+``` 
+To verify the installation, run the command:
+```
+(base) [mthomas@comet-ln2:~] which jupyter
+~/miniconda3/bin/jupyter
+```
+More installation information can be found here: [https://anaconda.org/anaconda/jupyter](https://anaconda.org/anaconda/jupyter).
+
+## Install JupyterLab
+JupyterLab is designed as an extensible environment and can be installed with conda, pip, docker, etc. For full details, see:  [https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
+
+To use `conda` to install jupyerlab, run the terminal command:
+```
+conda install -c conda-forge jupyterlab
+```
+To verify the installation, run the command:
+```
+(base) [mthomas@comet-ln2:~] which jupyter-labextension
+~/miniconda3/bin/jupyter-labextension
+```
+
 
 ## Other Python Packages**
 Any other Python packages you need to run your notebook should be installed with Conda. You can install python packages in a conda environment while your notebook is running. This is useful if you forgot a package, you won't have to worry about cancelling and restarting your job before installing. However, it is recommended that you install all required packages beforehand to save yourself valuable compute time.
