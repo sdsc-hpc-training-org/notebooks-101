@@ -12,12 +12,13 @@ To install Miniconda on Linux, you need to locate and download the installer pac
 wget <link-to-installer-file>
 ``` 
 to download the install package. 
-Once you have downloaded the correct installer, follow the installation instructions [here](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
+Once you have downloaded the correct installer, follow the installation instructions [https://conda.io/projects/conda/en/latest/user-guide/install/index.html](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). For SDSC HPC systems Comet, TSCC, and Stratus, the name of the downloaded installer file is `Miniconda3-latest-Linux-x86_64.sh`
 
 ### Run the installer
 Change the permissions so you can exectue the script: `chmod +x Miniconda3-latest-Linux-x86_64.sh`
 Run the bash install script: 
-```bash Miniconda3-latest-Linux-x86_64.sh
+```
+bash Miniconda3-latest-Linux-x86_64.sh
 ``` 
 or `./Miniconda3-latest-Linux-x86_64.sh`
 You should answer yes to almost all of the questions. Make sure to type in the word "yes" for the license agreement.
@@ -29,7 +30,6 @@ To verify the installation, run the command:
 (base) [mthomas@comet-ln2:~] which conda
 ~/miniconda3/bin/conda
 ```
-
 
 ## Install Jupyter Notebook
 To run jupyter notebooks,  you need to install the `jupyter` package using the command 
