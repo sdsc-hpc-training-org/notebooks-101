@@ -30,12 +30,25 @@ or
 ```
 You should answer yes to almost all of the questions. Make sure to type in the word "yes" for the license agreement.
 Also be sure to type in "yes" when the installer asks you if you want to run conda init.
+In addition, you need to make sure that the installer has placed these two lines into your `.bashrc` file:
+```
+The Miniconda installer should prompt to add each of the following lines separately to the .bashrc file:
+
+. /home/$USER/miniconda3/etc/profile.d/conda.sh
+conda activate
+```
+If not present, add the two lines to the file. Once you have done this, restart your bash shell: 
+run the command
+```
+source ~/.bashrc
+```
+which "restarts" the shell environment.
+
 Miniconda should now be installed. By default, Miniconda should be installed in your home directory:
 ```
 Miniconda3 will now be installed into this location:
 /home/$USER/miniconda3
 ```
-If Miniconda still does not seem to be installed, try using the command `source ~/.bashrc`, which "restarts" conda.
 
 To verify the installation, run the command:
 ```
@@ -50,7 +63,7 @@ conda install jupyter
 ``` 
 To verify the installation, run the command:
 ```
-(base) [mthomas@comet-ln2:~] which jupyter
+(base) [$USER@comet-ln2:~] which jupyter
 ~/miniconda3/bin/jupyter
 ```
 More installation information can be found here: [https://anaconda.org/anaconda/jupyter](https://anaconda.org/anaconda/jupyter).
@@ -64,7 +77,7 @@ conda install -c conda-forge jupyterlab
 ```
 To verify the installation, run the command:
 ```
-(base) [mthomas@comet-ln2:~] which jupyter-labextension
+(base) [$USER@comet-ln2:~] which jupyter-labextension
 ~/miniconda3/bin/jupyter-labextension
 ```
 
