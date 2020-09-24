@@ -66,6 +66,8 @@ If you refresh too soon, you may see this page. This is expected and you'll just
 
 Note that the time positional argument must occur after all the flags. There will be an error if you put any flags after the positional argument.
 
+NOTE: There are some minor differences when using the script on Comet vs. Stratus vs. TSCC. For example, TSCC uses a different queue system called torque. You will see example torque scripts for jupyter in the RPS repository. The most important thing to notice is that when you run start_notebook it will automatially run with defaults for the cluster you are using. So you don't need to worry as much about which cluster you're on. 
+
 ### Examples
 Start a notebook in the debug queue
 `./start_notebook -d ~ -p debug -t 30`
