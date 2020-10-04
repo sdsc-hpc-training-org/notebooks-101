@@ -16,7 +16,7 @@ to download the install package. For SDSC HPC systems, the current link is the `
 Once you have downloaded the correct installer, follow the installation instructions [https://conda.io/projects/conda/en/latest/user-guide/install/index.html](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). For SDSC HPC systems Comet, TSCC, and Stratus, the name of the downloaded installer file is `Miniconda3-latest-Linux-x86_64.sh`
 
 ### Run the installer
-Change the permissions so you can exectue the script: 
+Change the permissions so you can execute the script: 
 ```
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ```

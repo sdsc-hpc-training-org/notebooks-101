@@ -7,20 +7,35 @@
 Running Notebooks on HPC Systems 
 ========================================
 
-*****************************************************************************
-This is the landing page for Jupyter Notebooks on SDSC HPC system information. Choose the correct version in the bottom right of the page for the system you are using.
-*****************************************************************************
+This tutorial shows you how to run Jupyter Lab or Notebooks on Comet, TSCC, or TSCC-Stratus using different types of connections to these services, and running them on different nodes (login, interactive, and compute). 
 
-Comet: https://comet-notebooks-101.readthedocs.io/en/comet/
-************************************
+.. note:: It is against SDSC policy to run applications, including notebooks, on the login node. Notebook should be run on compute nodes only.
 
-Stratus: https://comet-notebooks-101.readthedocs.io/en/tscc/ 
-************************************
+Once the notebook is running, you can access a the notebook directly from a browser running on your local system (laptop, workstation, etc.). Note that unless you are using `SSH Tunneling`, the connection is insecure, and will result in a notebook served over a non-encrypted communication channel between your localhost and the remote service, which has the potential to be hacked by malicious parties.
+
+On Comet, we support the following connection scenarios:
+
+* Connection to Notebook over HTTP (insecure)
+* Connection to Notebook over SSH tunneling (secure)
+* Connection to Notebook over HTTPS using the [Reverse Proxy Service](https://github.com/sdsc-hpc-training-org/reverse-proxy)  (very secure)
+
+In addition, notebooks can be run on the following nodes:
+
+* Login node
+* Interactive node
+* Compute node
+* GPU node
+
+The choices and combinations used to run notebooks affect the security and efficiency of you application. In the next sections, we'll describe how to connect and how to run the notebooks and the security impacts of these configurations.
 
 .. toctree::
    :maxdepth: 2
 
    overview.md
+   methods/sshConnect.md
+   methods/tunneling.md
+   methods/reverseProxy.md
+   examples.md
    prerequisites.md
    aboutus.md
    contactus.md
