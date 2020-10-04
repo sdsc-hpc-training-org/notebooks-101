@@ -11,7 +11,9 @@ This tutorial shows you how to run Jupyter Lab or Notebooks on Comet, TSCC, or T
 
 .. note:: It is against SDSC policy to run applications, including notebooks, on the login node. Notebook should be run on compute nodes only.
 
-Once the notebook is running, you can access a the notebook directly from a browser running on your local system (laptop, workstation, etc.). Note that unless you are using `SSH Tunneling`, the connection is insecure, and will result in a notebook served over a non-encrypted communication channel between your localhost and the remote service, which has the potential to be hacked by malicious parties.
+Once the notebook is running, you can access a the notebook directly from a browser running on your local system (laptop, workstation, etc.). 
+
+.. note:: Unless you are using `SSH Tunneling` or the `Reverse Proxy` methods, the connection is insecure and has the potential to be hacked by malicious parties.
 
 On Comet, we only support the following connection scenarios:
 
@@ -31,10 +33,10 @@ The choices and combinations used to run notebooks affect the security and effic
    :maxdepth: 2
 
    overview.md
-   methods/sshConnect.md
-   methods/tunneling.md
-   methods/reverseProxy.md
    examples.md
    prerequisites.md
+   methods/httpConnect.md
+   methods/tunneling.md
+   methods/reverseProxy.md
    aboutus.md
    contactus.md

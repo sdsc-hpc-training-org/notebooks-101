@@ -16,11 +16,7 @@ to download the install package. For SDSC HPC systems, the current link is the `
 Once you have downloaded the correct installer, follow the installation instructions [https://conda.io/projects/conda/en/latest/user-guide/install/index.html](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). For SDSC HPC systems Comet, TSCC, and Stratus, the name of the downloaded installer file is `Miniconda3-latest-Linux-x86_64.sh`
 
 ### Run the installer
-<<<<<<< HEAD
 Change the permissions so you can execute the script: 
-=======
-Change the permissions so you can exectue the script: 
->>>>>>> 403b3f160a461f225038afa10fea621a34151470
 ```
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ```
@@ -34,8 +30,6 @@ or
 ```
 You should answer yes to almost all of the questions. Make sure to type in the word "yes" for the license agreement.
 Also be sure to type in "yes" when the installer asks you if you want to run conda init.
-<<<<<<< HEAD
-=======
 In addition, you need to make sure that the installer has placed these two lines into your `.bashrc` file:
 ```
 The Miniconda installer should prompt to add each of the following lines separately to the .bashrc file:
@@ -50,16 +44,12 @@ source ~/.bashrc
 ```
 which "restarts" the shell environment.
 
->>>>>>> 403b3f160a461f225038afa10fea621a34151470
 Miniconda should now be installed. By default, Miniconda should be installed in your home directory:
 ```
 Miniconda3 will now be installed into this location:
 /home/$USER/miniconda3
 ```
-<<<<<<< HEAD
 If Miniconda still does not seem to be installed, try using the command `source ~/.bashrc`, which "restarts" conda.
-=======
->>>>>>> 403b3f160a461f225038afa10fea621a34151470
 
 To verify the installation, run the command:
 ```
@@ -74,11 +64,7 @@ conda install jupyter
 ``` 
 To verify the installation, run the command:
 ```
-<<<<<<< HEAD
-(base) [mthomas@comet-ln2:~] which jupyter
-=======
 (base) [$USER@comet-ln2:~] which jupyter
->>>>>>> 403b3f160a461f225038afa10fea621a34151470
 ~/miniconda3/bin/jupyter
 ```
 More installation information can be found here: [https://anaconda.org/anaconda/jupyter](https://anaconda.org/anaconda/jupyter).
@@ -92,11 +78,7 @@ conda install -c conda-forge jupyterlab
 ```
 To verify the installation, run the command:
 ```
-<<<<<<< HEAD
-(base) [mthomas@comet-ln2:~] which jupyter-labextension
-=======
 (base) [$USER@comet-ln2:~] which jupyter-labextension
->>>>>>> 403b3f160a461f225038afa10fea621a34151470
 ~/miniconda3/bin/jupyter-labextension
 ```
 
@@ -110,27 +92,27 @@ Choose whatever name you want - it should reflect the application/project you ar
 `$ conda create --name example_env`    
 
 ### To see which virtual environments you’ve created
-$ conda env list
+`$ conda env list`
 
 To use a particular virtual environment (e.g., one named ‘example_env’):
-$ source activate example_env # Note: don’t use ‘conda activate’
+`$ source activate example_env # Note: don’t use ‘conda activate’`
 
 ### To see which versions of a package are available
-(example_env) $ conda search package_name
+`(example_env) $ conda search package_name`
 This searches for packages from the default “channel.”  Other channels might have newer versions available.  For instance, we’ve seen more recent versions of the ‘yt’ package in the channel named “conda-forge”.  To install from a different channel, use something like:
-(example_env) $ conda search -c conda-forge yt
+`(example_env) $ conda search -c conda-forge yt`
 
 ### To install packages in an active virtual environment
-(example_env) $ conda install package_name  # e.g, like ‘yt’
+`(example_env) $ conda install package_name  # e.g, like ‘yt’`
 As with the package search, you can install from a different channel using a ‘-c channel_name’ flag, e.g.:
-(example_env) $ conda install -c conda-forge yt
+`(example_env) $ conda install -c conda-forge yt`
 
 ### To update a package to a newer version
-(example_env) $ conda update package_name
+`(example_env) $ conda update package_name`
 Like install and search, this command can take a ‘-c channel-name’ flag if you want to update to newer versions than are in the default channel.
 
 ### To start a Python interpreter with access to the installed packages:
-(example_env) $ python    # python3 works as well
+`(example_env) $ python    # python3 works as well`
 
 ### To stop using the current virtual environment:
 `(example_env) $ source deactivate`
