@@ -16,7 +16,11 @@ to download the install package. For SDSC HPC systems, the current link is the `
 Once you have downloaded the correct installer, follow the installation instructions [https://conda.io/projects/conda/en/latest/user-guide/install/index.html](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). For SDSC HPC systems Comet, TSCC, and Stratus, the name of the downloaded installer file is `Miniconda3-latest-Linux-x86_64.sh`
 
 ### Run the installer
+<<<<<<< HEAD
 Change the permissions so you can execute the script: 
+=======
+Change the permissions so you can exectue the script: 
+>>>>>>> 403b3f160a461f225038afa10fea621a34151470
 ```
 chmod +x Miniconda3-latest-Linux-x86_64.sh
 ```
@@ -30,12 +34,32 @@ or
 ```
 You should answer yes to almost all of the questions. Make sure to type in the word "yes" for the license agreement.
 Also be sure to type in "yes" when the installer asks you if you want to run conda init.
+<<<<<<< HEAD
+=======
+In addition, you need to make sure that the installer has placed these two lines into your `.bashrc` file:
+```
+The Miniconda installer should prompt to add each of the following lines separately to the .bashrc file:
+
+. /home/$USER/miniconda3/etc/profile.d/conda.sh
+conda activate
+```
+If not present, add the two lines to the file. Once you have done this, restart your bash shell: 
+run the command
+```
+source ~/.bashrc
+```
+which "restarts" the shell environment.
+
+>>>>>>> 403b3f160a461f225038afa10fea621a34151470
 Miniconda should now be installed. By default, Miniconda should be installed in your home directory:
 ```
 Miniconda3 will now be installed into this location:
 /home/$USER/miniconda3
 ```
+<<<<<<< HEAD
 If Miniconda still does not seem to be installed, try using the command `source ~/.bashrc`, which "restarts" conda.
+=======
+>>>>>>> 403b3f160a461f225038afa10fea621a34151470
 
 To verify the installation, run the command:
 ```
@@ -50,7 +74,11 @@ conda install jupyter
 ``` 
 To verify the installation, run the command:
 ```
+<<<<<<< HEAD
 (base) [mthomas@comet-ln2:~] which jupyter
+=======
+(base) [$USER@comet-ln2:~] which jupyter
+>>>>>>> 403b3f160a461f225038afa10fea621a34151470
 ~/miniconda3/bin/jupyter
 ```
 More installation information can be found here: [https://anaconda.org/anaconda/jupyter](https://anaconda.org/anaconda/jupyter).
@@ -64,7 +92,11 @@ conda install -c conda-forge jupyterlab
 ```
 To verify the installation, run the command:
 ```
+<<<<<<< HEAD
 (base) [mthomas@comet-ln2:~] which jupyter-labextension
+=======
+(base) [$USER@comet-ln2:~] which jupyter-labextension
+>>>>>>> 403b3f160a461f225038afa10fea621a34151470
 ~/miniconda3/bin/jupyter-labextension
 ```
 
