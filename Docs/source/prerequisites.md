@@ -120,12 +120,6 @@ Like install and search, this command can take a ‘-c channel-name’ flag if y
 ### To delete an inactive virtual environment:
 `$ conda env remove --name example_env`
 
-## Install JupyterNotebooks and Jupyterlab
-
-You'll need to install jupyter using `conda install jupyter`. More info [here](https://anaconda.org/anaconda/jupyter).
-If you want to use `Jupyterlab`, install that.
-
-
 ## Other Python Packages
 Any other Python packages you need to run your notebook should be installed with Conda. You can install python packages in a conda environment while your notebook is running. This is useful if you forgot a package, you won't have to worry about cancelling and restarting your job before installing. However, it is recommended that you install all required packages beforehand to save yourself valuable compute time.
 
