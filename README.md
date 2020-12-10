@@ -3,7 +3,7 @@
 
 [![Documentation Status](https://readthedocs.org/projects/comet-notebooks-101/badge/?version=latest)](https://comet-notebooks-101.readthedocs.io/)
 
-# notebooks-101
+# Notebooks-101 Tutorial
 Everything you need to know about running Jupyter Notebooks on HPC Systems at SDSC.
 Read the tutorials here: https://comet-notebooks-101.readthedocs.io/
 
