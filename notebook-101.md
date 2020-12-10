@@ -14,7 +14,7 @@ By default, these notebooks are not secure, and potentially expose a user’s lo
 
 
 # Example Notebooks
-This page will be updated regularly with example notebooks, primarly for beginners and those who are new to using notebooks on Comet.
+This page will be updated regularly with example notebooks, primarly for beginners and those who are new to using notebooks on SDSC HPC Systems.
 
 ## Beginner Tutorials
 * [Python Series](https://github.com/sinkovit/PythonSeries)
