@@ -4,8 +4,8 @@
 
 Everything you need to know about running Jupyter Notebooks on HPC Systems at SDSC.
 Read the tutorial here: 
-* Notebooks: https://sdsc-hpc-training-dev.github.io/beta-test/notebooks-101/
-* Expanse:   https://sdsc-hpc-training-dev.github.io/beta-test/expanse-101/
+* Notebooks: https://hpc-training.sdsc.edu/comet-101/
+* Expanse:   https://hpc-training.sdsc.edu/expanse-101/
 
 ## Interactive Video Link:
 This material was presented as part of a webinar presented on December 11, 2020.
