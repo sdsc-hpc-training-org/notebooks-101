@@ -2,7 +2,7 @@
 
 # Jupyter Notebook Overview
 
-![connection over HTTP](Docs/images/jupyter-notebook-launch-methods.png)
+![connection over HTTP](https://github.com/sdsc-hpc-training-org/notebooks-101/blob/master/Docs/images/jupyter-notebook-launch-methods.png)
 
 
 Jupyter Notebooks are interactive web tools known as a computational notebooks, which researchers can use to combine software code, explanatory text and multimedia resources, and computational output, in a single document. Jupyter has emerged as a de facto standard for data scientists and other scientific domains. Notebooks can be launched locally and access local file systems, or they can be launched on a remote machine, which provides access to a user’s files on the remote system. In the latter case, the notebooks are launched via a process that creates a unique URL that is composed of the hostname plus an available port (chosen by the jupyter application) plus a one-time token. The user obtains this URL and enters it into a local web browser, where the notebook is available as long as the process on the remote machine is up and running. By default, these notebooks are not secure, and potentially expose a users local files to unwanted users.
