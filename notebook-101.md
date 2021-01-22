@@ -1,6 +1,6 @@
 # Running Jupyter Notebook on SDSC HPC System
 
-# Jupyter Notebook Overview
+## Jupyter Notebook Overview
 
 ![connection over HTTP](https://github.com/sdsc-hpc-training-org/notebooks-101/blob/master/Docs/images/jupyter-notebook-launch-methods.png)
 
@@ -13,20 +13,20 @@ In this tutorial, we cover SDSC’s multi-tiered approach to running notebooks m
 By default, these notebooks are not secure, and potentially expose a user’s local files to unwanted access. In this tutorial, we present SDSC’s multitiered approach to running notebooks more securely.
 
 
-# Example Notebooks
+## Example Notebooks
 This page will be updated regularly with example notebooks, primarily for beginners and those who are new to using notebooks on SDSC HPC Systems.
 
-## Beginner Tutorials
+### Beginner Tutorials
 * [Python Series](https://github.com/sinkovit/PythonSeries)
 * [Boring Python Notebooks](https://github.com/sdsc-hpc-training-org/notebook_examples/tree/master/Boring_Python)
 * [GPU Notebook Examples](https://github.com/sdsc-hpc-training-org/notebook_examples)
 
-## More Advanced
+### More Advanced
 * [Data Visualization With Python Using Jupyter Notebooks](https://github.com/sdsc-hpc-training-org/webinars/tree/master/201912_data_viz_python)
 
 
 
-# Software Prerequisites
+## Software Prerequisites
 
 Running Juypter notebooks relies on you handling your own python jupyter package installation. Typically, users install Anaconda on local systems. Anaconda is a common package manager used for data science, but it it not recommended for use on HPC systems and running jupyter notebooks remotely. Anaconda is a large package and has a lot of overhead. For best performance, we recommend using `Miniconda`.
 
@@ -34,7 +34,7 @@ Running Juypter notebooks relies on you handling your own python jupyter package
 
 If you’re not familiar with Anaconda, check it out [here](https://www.anaconda.com/products/individual).
 
-## Install Miniconda
+### Install Miniconda
 To install Miniconda on Linux, you need to locate and download the installer package for your system. For linx, you will find a list of installers [https://docs.conda.io/en/latest/miniconda.html#linux-installers](https://docs.conda.io/en/latest/miniconda.html#linux-installers). On the HPC system, use:
 
 ```
@@ -45,7 +45,7 @@ to download the install package. For SDSC HPC systems, the current link is the `
 
 Once you have downloaded the correct installer, follow the installation instructions [https://conda.io/projects/conda/en/latest/user-guide/install/index.html](https://conda.io/projects/conda/en/latest/user-guide/install/index.html). For SDSC HPC systems (Expanse, Comet, TSCC, and Stratus), the name of the downloaded installer file is `Miniconda3-latest-Linux-x86_64.sh`
 
-### Run the installer
+#### Run the installer
 Change the permissions so you can execute the script:
 
 ```
@@ -95,7 +95,7 @@ To verify the installation, run the command:
 ~/miniconda3/bin/conda
 ```
 
-## Install Jupyter Notebook
+### Install Jupyter Notebook
 To run jupyter notebooks,  you need to install the `jupyter` package using the command
 
 ```
@@ -111,7 +111,7 @@ To verify the installation, run the command:
 
 More installation information can be found here: [https://anaconda.org/anaconda/jupyter](https://anaconda.org/anaconda/jupyter).
 
-## Install JupyterLab
+### Install JupyterLab
 JupyterLab is designed as an extensible environment and can be installed with conda, pip, docker, etc. For full details, see:  [https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html)
 
 To use `conda` to install jupyerlab, run the terminal command:
@@ -128,44 +128,44 @@ To verify the installation, run the command:
 ```
 
 
-## Other Python Packages**
+### Other Python Packages
 Any other Python packages you need to run your notebook should be installed with Conda. You can install python packages in a conda environment while your notebook is running. This is useful if you forgot a package, you won't have to worry about cancelling and restarting your job before installing. However, it is recommended that you install all required packages beforehand to save yourself valuable compute time.
 
 
-## Setup a Conda Virtual Environment
+### Setup a Conda Virtual Environment
 Choose whatever name you want - it should reflect the application/project you are working on.
 `$ conda create --name example_env`    
 
-### To see which virtual environments you’ve created
+### #To see which virtual environments you’ve created
 `$ conda env list`
 
 To use a particular virtual environment (e.g., one named ‘example_env’):
 `$ source activate example_env # Note: don’t use ‘conda activate’`
 
-### To see which versions of a package are available
+#### To see which versions of a package are available
 `(example_env) $ conda search package_name`
 This searches for packages from the default “channel.”  Other channels might have newer versions available.  For instance, we’ve seen more recent versions of the ‘yt’ package in the channel named “conda-forge”.  To install from a different channel, use something like:
 `(example_env) $ conda search -c conda-forge yt`
 
-### To install packages in an active virtual environment
+#### To install packages in an active virtual environment
 `(example_env) $ conda install package_name  # e.g, like ‘yt’`
 As with the package search, you can install from a different channel using a ‘-c channel_name’ flag, e.g.:
 `(example_env) $ conda install -c conda-forge yt`
 
-### To update a package to a newer version
+#### To update a package to a newer version
 `(example_env) $ conda update package_name`
 Like install and search, this command can take a ‘-c channel-name’ flag if you want to update to newer versions than are in the default channel.
 
-### To start a Python interpreter with access to the installed packages:
+#### To start a Python interpreter with access to the installed packages:
 `(example_env) $ python    # python3 works as well`
 
-### To stop using the current virtual environment:
+#### To stop using the current virtual environment:
 `(example_env) $ source deactivate`
 
-### To delete an inactive virtual environment:
+#### To delete an inactive virtual environment:
 `$ conda env remove --name example_env`
 
-## Other Python Packages
+### Other Python Packages
 Any other Python packages you need to run your notebook should be installed with Conda. You can install python packages in a conda environment while your notebook is running. This is useful if you forgot a package, you won't have to worry about cancelling and restarting your job before installing. However, it is recommended that you install all required packages beforehand to save yourself valuable compute time.
 
 ## Download Example Notebooks
@@ -263,10 +263,10 @@ To learn about Python, run the ```Python basics.ipynb```   notebook.
 To see an example of remote visualization, run the  ```Matplotlib.ipynb```  notebook!
 
 
-#### Access the node in your browser
+### Access the node in your browser
 Copy the the URL above into the browser running on your laptop.
 
-#### Use your jupyterlab/jupyter notebook server!
+### Use your jupyterlab/jupyter notebook server!
 Enjoy. Note that your notebook is unsecured.
 
 
@@ -439,7 +439,7 @@ If you refresh too soon, you may see this page. This is expected and you'll just
 
 
 
-# About the Team
+## About the Team
 
 [Mary Thomas](https://www.sdsc.edu/research/researcher_spotlight/thomas_mary.html) is a principal leader of the SDSC HPC Training team.
 
@@ -454,7 +454,7 @@ Scott Sakai is the security expert and ops/backend for the Reverse Proxy Service
 
 
 
-# Contact Us
+### Contact Us
 
 If you have questions or trouble with the material in this tutorial, see the <a href="https://comet.sdsc.edu">Comet User Guide</a>, or please contact the following consulting teams:
 
