@@ -1,6 +1,13 @@
----
-sort: 2
----
+#  SDSC Notebooks-101 Tutorial -- ARCHIVED, DEPRECATED
+
+## Update Notes:
+### 06/12/2024: Refer to the Galyleo project here:  https://github.com/mkandes/galyleo
+### 04/20/2024: The contents of this repository have been archived.
+
+
+=====================================================
+
+
 # Notebooks-101 Tutorial
 
 
